@@ -1,0 +1,478 @@
+{%load static from staticfiles%}
+
+
+<!DOCTYPE html>
+<html>
+
+<!-- Mirrored from xena.tonytemplates.com/themeforest/welldone/product.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 10 Oct 2016 18:08:15 GMT -->
+<head>
+<!-- Basic -->
+<meta charset="utf-8">
+<title>OASIS Store</title>
+<meta name="keywords" content="HTML5 Template" />
+<meta name="description" content="WellDone - Responsive HTML5 Template">
+<meta name="author" content="etheme.com">
+<!-- <link rel="shortcut icon" href="{% static 'shop/favicon.ico"> -->
+<!-- Mobile Specific Metas -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- Web Fonts  -->
+<link href="http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800%7CShadows+Into+Light" rel="stylesheet" type="text/css">
+<!-- Icon Fonts  -->
+<link rel="stylesheet" href="{% static 'shop/font/style.css' %}">
+<!-- Vendor CSS -->
+<link rel="stylesheet" href="{% static 'shop/vendor/waves/waves.css' %}">
+<link rel="stylesheet" href="{% static 'shop/vendor/slick/slick.css' %}">
+<link rel="stylesheet" href="{% static 'shop/vendor/slick/slick-theme.css' %}">
+<link rel="stylesheet" href="{% static 'shop/vendor/bootstrap-select/bootstrap-select.css' %}">
+<!-- Magnific Popup core CSS file -->
+<link rel="stylesheet" href="{% static 'shop/vendor/magnific-popup/magnific-popup.css' %}">
+<!-- Custom CSS -->
+<link rel="stylesheet" href="{% static 'shop/css/style.css' %}">
+<link rel="stylesheet" href="{% static 'shop/css/style-colors.css' %}">
+<!-- Custom Fonts -->
+<link href='https://fonts.googleapis.com/css?family=Roboto:400,300,300italic,400italic,700,700italic' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Ubuntu:400,700' rel='stylesheet' type='text/css'>
+
+<!-- Head Libs -->
+
+<!--[if IE]>
+        <link rel="stylesheet" href="css/ie.css">
+        <![endif]-->
+<!--[if lte IE 8]>
+        <script src="http://cdnjs.cloudflare.com/ajax/libs/respond.js/1.3.0/respond.js"></script>
+        <script src="http://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7/html5shiv.js"></script>
+        <![endif]-->
+
+<!-- Modernizr -->
+<script src="{% static 'shop/vendor/modernizr/modernizr.js' %}"></script>
+</head>
+
+<body>
+<div id="loader-wrapper" class="loader-off">
+<div id="loader"></div>
+</div>
+<!-- Modal Search -->
+<div class="overlay overlay-scale">
+
+  <div class="overlay__content">
+    <button type="button" class="overlay-close"> ✕ </button><form id="search-form" class="search-form outer" >
+      <div class="input-group input-group--wd">
+        <input type="text" class=" input--full email" placeholder="Enter Your Email">
+        <span class="input-group__bar"></span> </div>
+      <button class="btn btn--wd text-uppercase wave waves-effect waves-effect proceed">PROCEED</button>
+    </form>
+  </div>
+</div>
+<!-- / end Modal Search -->
+<div class="wrapper">
+  <!-- Header section -->
+  <header class="header header--sticky">
+    <!-- <div class="header-line hidden-xs">
+      <div class="container">
+        <div class="pull-left">
+
+        </div>
+        <div class="pull-right">
+          <div class="user-links">
+            <ul>
+              <li class="user-links__item"><a href="#">Sign In</a></li>
+              <li class="user-links__item"><a href="#">Register</a></li>
+              <li  class="user-links__item user-links__item--separate"><a href="#" class="color-facebook">FACEBOOK</a> LOGIN</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div> -->
+    <div class="header__dropdowns-container">
+
+    </div>
+    <nav class="navbar navbar-wd" id="navbar">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" id="slide-nav"> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
+          <!--  Logo  -->          <a class="logo" href="../../">
+          	<img class="logo-default" src="{% static 'shop/images/logo.png' %}" alt=""/>
+          	<img class="logo-mobile" src="{% static 'shop/images/logo-mobile.png' %}" alt=""/>
+          	<img class="logo-transparent" src="{% static 'shop/images/logo.png' %}" alt=""/>
+          </a>
+<!-- End Logo -->
+        </div>
+        <div class="pull-left search-focus-fade" id="slidemenu">
+          <div class="slidemenu-close visible-xs">✕</div>
+          <ul class="nav navbar-nav">
+            <li> <a href="../../" class="dropdown-toggle"><span class="link-name">Home</span><span class="caret caret--dots"></span></a>
+
+            </li>
+
+
+            <li><a href="../../#product-section"  class="dropdown-toggle"><span class="link-name">SHOP</span><span class="caret caret--dots"></span></a>
+
+            </li>
+
+            <li><a href="#order" class="wave"><span class="link-name">Orders</span></a></li>
+
+          </ul>
+        </div>
+        <div class="header__dropdowns">
+          <div class="header__cart pull-left"><span class="header__cart__indicator hidden-xs">{{totalprice}}</span>
+            <div class="dropdown pull-right"><a href="#" class="btn dropdown-toggle btn--links--dropdown header__cart__button header__dropdowns__button" data-toggle="dropdown"><span class="icon icon-bag-alt"></span><span class="badge badge--menu cart-items-no">0</span></a>
+              <div class="dropdown-menu animated fadeIn shopping-cart" role="menu">
+                <div class="shopping-cart__settings"><a href="#" class="icon icon-gear"></a></div>
+                <div class="shopping-cart__top text-uppercase">Your Cart</div>
+                <ul id="cart-list">
+
+                  <li class='shopping-cart__item default__item' style="display:none">
+                    <div class="shopping-cart__item__image pull-left"><a href="#"><img src="{% static 'shop/images/products/product.jpg' %}" alt=""/></a></div>
+                    <div class="shopping-cart__item__info">
+                      <div class="shopping-cart__item__info__title">
+                        <h2><a href="#"></a></h2>
+                      </div>
+                    <div class="info__option">
+                      <div class="shopping-cart__item__info__color">Color: <span></span></div>
+                      <div class="shopping-cart__item__info__size">Size: <span></span></div>
+                    </div>
+                      <div class="shopping-cart__item__info__price">0</div>
+                      <div class="shopping-cart__item__info__qty">Qty:<span>0</span></div>
+                      <div class="shopping-cart__item__info__delete" ><a href="#" class="icon icon-clear delete_item" onclick="delete_item(this)"></a></div>
+                    </div>
+                  </li>
+                </ul>
+                <div class="shopping-cart__bottom">
+                  <div class="pull-left">Subtotal: <span class="shopping-cart__total"> {{totalprice}}</span></div>
+                  <div class="pull-right">
+                    <button type="submit" class="btn btn--wd text-uppercase checkout">Checkout</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>        <div class="dropdown pull-right" style="display:none;"> <a href="#" class="btn dropdown-toggle btn--links--dropdown header__dropdowns__button" data-toggle="dropdown"><span class="icon icon-dots"></span></a>
+            <ul class="dropdown-menu ul-row animated fadeIn" role="menu">
+              <li class='li-col currency'>
+              <li class='li-col list-user-menu'>
+          <h4>My Account</h4>
+                <ul>
+                  <li><a href="#">Account</a></li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+  </div>
+      </div>
+    </nav>
+  </header>
+  <div id="pageContent">
+
+    <!-- Breadcrumb section -->
+
+    <section class="breadcrumbs breadcrumbs-boxed">
+      <div class="container">
+        <ol class="breadcrumb breadcrumb--wd pull-left">
+          <li><a href="#">Home</a></li>
+          <li class="active">{{name}}</li>
+        </ol>
+<!--         <ul id="productOther" class="product-other pull-right hidden-xs">
+          <li class="product-other__link product-prev"><a href="#">Fast Seconds Knit White</a><span class="product-other__link__image"><img src='images/products/product-4.jpg'/></span></li>
+          <li class="product-other__link product-next"><a href="#">Unconditional Dress White</a><span class="product-other__link__image"><img src='images/products/product-3.jpg'/></span></li>
+        </ul> -->
+      </div>
+    </section>
+
+    <!-- Content section -->
+    <section class="content">
+      <div class="container">
+        <div class="row product-info-outer">
+          <div class="col-sm-4 col-md-4 col-lg-5 hidden-xs">
+            <div class="product-main-image">
+              <div class="product-main-image__item"><img class="product-zoom product-img" src="{{pic_f}}" /></div>
+              <div class="product-main-image__zoom"></div>
+            </div>
+            <div class="product-images-carousel">
+              <ul id="smallGallery">
+                <li><a href="#" data-image="{{pic_f}}" data-zoom-image="{{pic_f}}"><img src="{{pic_f}}" alt="" /></a></li>
+                <li><a href="#" data-image="{{pic_b}}" data-zoom-image="{{pic_b}}"><img src="{{pic_b}}" alt="" /></a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="product-info col-sm-8 col-md-4 col-lg-4">
+            <div class="product-info__title">
+              <h2 class="product-name" data-id="{{id}}">{{name}}</h2>
+              <div class="rating product-info__rating visible-xs"><span class="icon-star"></span><span class="icon-star"></span><span class="icon-star"></span><span class="icon-star"></span></div>
+            </div>
+            <div class="product-info__sku pull-right"><span class="label label-success product-avail">IN STOCK</span></div>
+            <ul id="singleGallery" class="visible-xs">
+              <li><img src="{% static 'shop/images/products/product-big-1.jpg' %}" alt="" /></li>
+              <li><img src="{% static 'shop/images/products/product-big-2.jpg' %}" alt="" /></li>
+              <li><img src="{% static 'shop/images/products/product-big-3.jpg' %}" alt="" /></li>
+              <li><img src="{% static 'shop/images/products/product-big-4.jpg' %}" alt="" /></li>
+              <li><img src="{% static 'shop/images/products/product-big-5.jpg' %}" alt="" /></li>
+            </ul>
+            <div class="price-box product-info__price"><span class="price-box__new product-price">{{price}}</span></div>
+            <div class="rating product-info__rating hidden-xs"><span class="icon-star"></span><span class="icon-star"></span><span class="icon-star"></span><span class="icon-star"></span><span class="icon-star"></span></div>
+            <div class="divider divider--xs product-info__divider"></div>
+            <div class="product-info__description product-description"> {{desc}} </div>
+            <div class="divider divider--xs product-info__divider"></div>
+            {% if category != "ticket" %}
+            <div class="row">
+              <div class="col-xs-6">
+
+                <label>Size:</label>
+                <select class="selectpicker product-size"  data-style="select--wd"  data-width="100%">
+                  {% for size in sizes %}
+                    <option>{{size}}</option>
+                  {% endfor %}
+
+                </select>
+              </div>
+              <div class="col-xs-6">
+                <label>Color:</label>
+
+                <select class="selectpicker product-color" data-style="select--wd"  data-width="100%">
+                  {% for color in colours%}
+                      <option>{{color}}</option>
+                  {% endfor %}
+                </select>
+              </div>
+            </div>
+            <div class="divider divider--sm"></div>
+            {% endif %}
+            <label>Quantity:</label>
+            <div class="outer">
+              <div class="input-group-qty pull-left"> <span class="pull-left"> </span>
+                <input type="text" name="quant[1]" class="input-number input--wd input-qty pull-left product-quantity" value="1" min="1" max="100">
+                <span class="pull-left btn-number-container">
+                <button type="button" class="btn btn-number btn-number--plus" data-type="plus" data-field="quant[1]"> + </button>
+                <button type="button" class="btn btn-number btn-number--minus" disabled="disabled" data-type="minus" data-field="quant[1]"> &#8211; </button>
+                </span> </div>
+              <div class="pull-left">
+                <button type = "submit" class="btn btn--wd text-uppercase" id="add-cart">Add to Cart</button>
+              </div>
+
+            </div>
+            <div class="divider divider--xs"></div>
+          </div>
+
+          <!-- <div class="col-sm-12 col-md-4 col-lg-3">
+            <div class="card">
+              <div class="card__row"> You can add your content here, like promotions or some additional info </div>
+              <a href="#" class="card__row card__row--icon">
+              <div class="card__row--icon__icon"> <span class="icon icon-shop-label"></span></div>
+              <div class="card__row--icon__text">
+                <div class="card__row__title">Special offer: 1+1=3</div>
+                Get a gift!</div>
+              </a> <a href="#" class="card__row card__row--icon">
+              <div class="card__row--icon__icon"> <span class="icon icon-money"></span></div>
+              <div class="card__row--icon__text">
+                <div class="card__row__title">Free Reward Card</div>
+                Worth $10, $50, $100. <br>
+              </div>
+              </a> <a href="#" class="card__row card__row--icon">
+              <div class="card__row--icon__icon"> <span class="icon icon-identification-alt"></span></div>
+              <div class="card__row--icon__text">
+                <div class="card__row__title">Join to our Club</div>
+              </div>
+              </a> <a class="card__row card__row--icon">
+              <div class="card__row--icon__icon"> <span class="icon icon-truck"></span></div>
+              <div class="card__row--icon__text">
+                <div class="card__row__title">Free shipping</div>
+              </div>
+              </a> </div>
+          </div> -->
+        </div>
+      </div>
+    </section>
+
+    <section class="content">
+      <div class="container">
+
+        <!-- Modal -->
+        <div class="modal quick-view zoom" id="quickView"  style=" opacity: 1">
+          <div class="modal-dialog">
+            <div class="modal-content"> </div>
+          </div>
+        </div>
+
+
+  </div>
+  <footer class="footer">
+
+    <div class="footer__column-links">
+      <div class="back-to-top"> <a href="#top" class="btn btn--round btn--round--lg"><span class="icon-arrow-up"></span></a></div>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-3 hidden-xs hidden-sm"> <!--  Logo  -->            <a class="logo logo--footer" href="index-2.html">
+				<img src="{% static 'shop/images/logo.png' %}" alt=""/>
+            </a>
+<!-- End Logo --> </div>
+          <div class="col-sm-3 col-md-3 mobile-collapse">
+            <h5 class="title text-uppercase mobile-collapse__title">Information </h5>
+            <div class="v-links-list mobile-collapse__content">
+              <ul>
+                <li><a href="#">Order history</a></li>
+                <li><a href="#">Shipping & Returns</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-sm-3 col-md-3 mobile-collapse">
+            <h5 class="title text-uppercase mobile-collapse__title">Service</h5>
+            <div class="v-links-list mobile-collapse__content">
+              <ul>
+                <li><a href="#">Developers</a></li>
+                <li><a href="#">Help & FAQs</a></li>
+              </ul>
+            </div>
+          </div>
+          <!-- <div class="col-sm-3 col-md-2 mobile-collapse">
+            <h5 class="title text-uppercase mobile-collapse__title">My account</h5>
+            <div class="v-links-list mobile-collapse__content">
+              <ul>
+                <li><a href="#">My Account</a></li>
+                <li><a href="#">Order history</a></li>
+                <li><a href="#">Advanced search</a></li>
+                <li><a href="#">Reviews</a></li>
+              </ul>
+            </div>
+          </div> -->
+          <div class="col-sm-3 col-md-3 mobile-collapse mobile-collapse--last">
+            <h5 class="title text-uppercase mobile-collapse__title">Contact</h5>
+            <div class="v-links-list mobile-collapse__content">
+              <ul>
+                <li class="icon icon-home">Spons</li>
+                <li class="icon icon-telephone">321321321, 321321321</li>
+                <li class="icon icon-mail"><a href="mailto:info@mydomain.com">info@mydomain.com</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- <div class="footer__subscribe">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-7 col-md-6">
+		  	  <div id="subscribeSuccess">
+				<p>Your email was added successfully!</p>
+			  </div>
+			  <div id="subscribeError">
+				<p>Something went wrong, try refreshing and submitting the form again.</p>
+			  </div>
+            <form id="subscribe-form" class="subscribe-form" method="post" novalidate>
+              <label class="subscribe-form__label text-uppercase pull-left">Subscribe</label>
+              <input type="text" class="subscribe-form__input input--wd" placeholder="Your e-mail address" name="subscribemail">
+              <button type="submit" class="btn btn--wd text-uppercase wave"><span class="hidden-xs">Subscribe</span><span class="icon icon-mail-fill visible-xs"></span></button>
+            </form>
+          </div>
+          <div class="col-sm-5 col-md-6">
+            <div class="social-links social-links--colorize social-links--large">
+              <ul>
+                <li class="social-links__item"><a class="icon icon-facebook" href="http://www.facebook.com/"></a></li>
+                <li class="social-links__item"><a class="icon icon-twitter" href="http://www.twitter.com/"></a></li>
+                <li class="social-links__item"><a class="icon icon-google" href="http://www.google.com/"></a></li>
+                <li class="social-links__item"><a class="icon icon-pinterest" href="http://www.pinterest.com/"></a></li>
+                <li class="social-links__item"><a class="icon icon-mail" href="mailto:mail@google.com"></a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div> -->
+<!-- <div class="footer__settings visible-xs">
+      <div class="container text-center">
+	   <div class="dropdown pull-left"> <a href="#" class="btn dropdown-toggle btn--links--dropdown header__dropdowns__button" data-toggle="dropdown" aria-expanded="false"><span class="header__dropdowns__button__symbol">$</span></a>
+            <ul class="dropdown-menu animated fadeIn" role="menu">
+              <li class="currency__item currency__item--active"><a href="#">$ USA Dollar</a></li>
+              <li class="currency__item"><a href="#">€ Euro</a></li>
+              <li class="currency__item"><a href="#">£ British Pound</a></li>
+            </ul>
+          </div>
+          <div class="dropdown pull-left"> <a href="#" class="btn dropdown-toggle btn--links--dropdown header__dropdowns__button" data-toggle="dropdown" aria-expanded="false"><span class="flag"><img src="{% static 'shop/images/flags/gb.png' %}" alt=""></span></a>
+            <ul class="dropdown-menu animated fadeIn languages languages--flag" role="menu">
+              <li class="languages__item languages__item--active"><a href="#"><span class="languages__item__flag flag"><img src="{% static 'shop/images/flags/gb.png' %}" alt=""></span><span class="languages__item__label">En</span></a></li>
+              <li class="languages__item"><a href="#"><span class="languages__item__flag flag"><img src="{% static 'shop/images/flags/de.png' %}" alt=""></span><span class="languages__item__label">De</span></a></li>
+              <li class="languages__item"><a href="#"><span class="languages__item__flag flag"><img src="{% static 'shop/images/flags/fr.png' %}" alt=""></span><span class="languages__item__label">Fr</span></a></li>
+            </ul>
+          </div>
+          <div class="dropdown pull-left"> <a href="#" class="btn dropdown-toggle btn--links--dropdown header__dropdowns__button" data-toggle="dropdown" aria-expanded="false">Account</a>
+            <ul class="dropdown-menu animated fadeIn" role="menu">
+              <li><a href="#">Account</a></li>
+              <li><a href="#">Wishlist</a></li>
+              <li><a href="#">Compare</a></li>
+              <li><a href="#">Checkout</a></li>
+            </ul>
+      </div>
+      </div>
+    </div> -->
+    <div class="footer__bottom">      <div class="container">
+        <!-- <div class="pull-left text-uppercase">© 2016 <a href="#">Welldone :)</a>. All Rights Reserved. </div> -->
+        <div class="pull-right text-uppercase text-right">with love <span class="icon-favorite color-heart"></span> from <a href="#">DVM</a></div>
+      </div>
+</div>
+  </footer>
+</div>
+<!-- <div class="compare-box" id="compareBox">
+  <div class="container">
+    <div class="compare-box__header">
+      <h3 class="compare-box__header__title">Compare</h3>
+      <div class="compare-box__header__toggle"><span class="compare-box__header__toggle__hide hide-compare">Hide<span class="icon icon-arrow-down"></span></span><span class="compare-box__header__toggle__show show-compare">Show<span class="icon icon-arrow-up"></span></span><span class="compare-box__header__toggle__close close-compare"><span class="icon icon-clear"></span></span></div>
+    </div>
+    <div class="compare-box__items">
+      <ul class="compare-box__items__list compare-carousel nav-top">
+        <li class="compare-box__items__list__item">
+          <div class="compare-box__items__list__item__delete"><a href="#" class="icon icon-clear"></a></div>
+          <a href="#"><img src="{% static 'shop/images/products/product-2.jpg' %}" alt=""></a></li>
+        <li class="compare-box__items__list__item empty">
+          <div class="compare-box__items__list__item__num">1</div>
+          <img src="{% static 'shop/images/products/product-empty.png' %}" alt=""/></li>
+        <li class="compare-box__items__list__item empty">
+          <div class="compare-box__items__list__item__num">2</div>
+          <img src="{% static 'shop/images/products/product-empty.png' %}" alt=""/></li>
+        <li class="compare-box__items__list__item empty">
+          <div class="compare-box__items__list__item__num">3</div>
+          <img src="{% static 'shop/images/products/product-empty.png' %}" alt=""/></li>
+        <li class="compare-box__items__list__item empty">
+          <div class="compare-box__items__list__item__num">4</div>
+          <img src="{% static 'shop/images/products/product-empty.png' %}" alt=""/></li>
+        <li class="compare-box__items__list__item empty">
+          <div class="compare-box__items__list__item__num">5</div>
+          <img src="{% static 'shop/images/products/product-empty.png' %}" alt=""/></li>
+        <li class="compare-box__items__list__item empty">
+          <div class="compare-box__items__list__item__num">6</div>
+          <img src="{% static 'shop/images/products/product-empty.png' %}" alt=""/></li>
+      </ul>
+      <div class="compare-box__actions">
+        <div class="compare-box__actions__btns"> <a href="#" class="btn btn--wd btn--lg text-uppercase">Compare</a> <a href="#" class="btn btn--wd btn--lg btn--light text-uppercase" id="removeAllCompare">Clear All</a> </div>
+      </div>
+    </div>
+  </div>
+</div> -->
+<!-- Vendor -->
+<!-- jQuery 1.10.1-->
+
+<script src="{% static 'shop/vendor/jquery/jquery.js' %}"></script>
+<!-- Bootstrap 3-->
+<script src="{% static 'shop/vendor/bootstrap/bootstrap.min.js' %}"></script>
+<!-- Specific Page Vendor -->
+<script src="{% static 'shop/vendor/waves/waves.min.js' %}"></script>
+<script src="{% static 'shop/vendor/slick/slick.min.js' %}"></script>
+<script src="{% static 'shop/vendor/bootstrap-select/bootstrap-select.min.js' %}"></script>
+<script src="{% static 'shop/vendor/parallax/jquery.parallax-1.1.3.js' %}"></script>
+<script src="{% static 'shop/vendor/waypoints/jquery.waypoints.min.js' %}"></script>
+<script src="{% static 'shop/vendor/waypoints/sticky.min.js' %}"></script>
+<script src="{% static 'shop/vendor/doubletaptogo/doubletaptogo.js' %}"></script>
+<script src="{% static 'shop/vendor/elevatezoom/jquery.elevatezoom.js' %}"></script>
+<script src="{% static 'shop/vendor/imagesloaded/imagesloaded.pkgd.min.js' %}"></script>
+<!-- Magnific Popup core JS file -->
+<script src="{% static 'shop/vendor/magnific-popup/jquery.magnific-popup.min.js' %}"></script> <script src="{% static 'shop/vendor/countdown/jquery.plugin.min.js' %}"></script>
+<script src="{% static 'shop/vendor/countdown/jquery.countdown.min.js' %}"></script>
+<!-- jQuery form validation -->
+<script src="{% static 'shop/vendor/form/jquery.form.js' %}"></script>
+<script src="{% static 'shop/vendor/form/jquery.validate.min.js' %}"></script>
+<!-- Custom -->
+<script src="{% static 'shop/js/custom.js' %}"></script>
+<script>
+var category = "{{category}}";
+</script>
+<script src="{% static 'shop/js/script.js' %}"></script>
+</body>
+
+<!-- Mirrored from xena.tonytemplates.com/themeforest/welldone/product.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 10 Oct 2016 18:08:54 GMT -->
+</html>
